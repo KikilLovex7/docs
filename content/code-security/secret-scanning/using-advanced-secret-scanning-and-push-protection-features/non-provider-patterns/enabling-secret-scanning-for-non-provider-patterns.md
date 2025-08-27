@@ -5,11 +5,13 @@ intro: 'You can enable {% data variables.product.prodname_secret_scanning %} to 
 permissions: '{% data reusables.permissions.security-repo-enable %}'
 product: '{% data reusables.gated-features.secret-scanning-non-provider-patterns %}'
 versions:
-  feature: secret-scanning-non-provider-patterns
+  fpt: '*'
+  ghec: '*'
+  ghes: '*'
 type: how_to
 topics:
   - Secret scanning
-  - Advanced Security
+  - Secret Protection
   - Alerts
   - Repositories
 shortTitle: Enable for non-provider patterns
@@ -19,7 +21,7 @@ shortTitle: Enable for non-provider patterns
 
 {% data reusables.secret-scanning.non-provider-patterns-beta %}
 
-You can enable scanning for non-provider patterns. Non-provider patterns correspond to secrets such as private keys and they have a higher ratio of false positives.
+You can enable scanning for non-provider patterns. Non-provider patterns correspond to secrets such as private keys.
 
 For more information about non-provider patterns, see "{% ifversion fpt or ghec %}[AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#about-user--alerts){% else %}[AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#about-secret-scanning-alerts){% endif %}."
 
@@ -32,16 +34,16 @@ For more information about non-provider patterns, see "{% ifversion fpt or ghec 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-settings %}
 {% data reusables.repositories.navigate-to-code-security-and-analysis %}
-1. Under {% data variables.product.prodname_secret_scanning_caps %}, to the right of "Non-provider patterns", click **Enable**.
+1. Under "{% data variables.product.UI_secret_protection_scanning %}", to the right of "Non-provider patterns", click **Enable**.
 
 {% ifversion security-configurations %}
 
 ### Enabling detection of non-provider patterns for an organization
 
-You can enable scanning for non-provider patterns at the organization level {% ifversion security-configurations-cloud %}using the {% data variables.product.prodname_github_security_configuration %} or {% endif %}by applying a custom security configuration. For more information, see {% ifversion security-configurations-cloud %}"[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/applying-the-github-recommended-security-configuration-in-your-organization)" and {% endif %}"[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/creating-a-custom-security-configuration)."
+You can enable scanning for non-provider patterns at the organization level {% ifversion security-configurations-cloud %}using the {% data variables.product.prodname_github_security_configuration %} or {% endif %}by applying a custom security configuration. For more information, see {% ifversion security-configurations-cloud %}[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/applying-the-github-recommended-security-configuration-in-your-organization) and {% endif %}[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/creating-a-custom-security-configuration).
 
 {% endif %}
 
 ## Further reading
 
-* "[AUTOTITLE](/code-security/secret-scanning/managing-alerts-from-secret-scanning)"
+* [AUTOTITLE](/code-security/secret-scanning/managing-alerts-from-secret-scanning)

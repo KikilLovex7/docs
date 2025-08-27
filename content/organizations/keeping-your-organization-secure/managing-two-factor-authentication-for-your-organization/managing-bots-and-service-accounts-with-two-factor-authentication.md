@@ -22,8 +22,8 @@ You should ensure that 2FA is enabled for unattended or shared access accounts i
 {% data variables.product.prodname_dotcom %} recommends the following steps for managing shared access to bots or service accounts with 2FA enabled. The steps ensure that only people who have access to a mailing list (controlled by you) and a centrally stored TOTP secret can sign in to the account.
 
 1. Set up a mailing list for the bot or service account which has all of the account owners as members of the alias.
-1. Add the new mailing list address as a verified email address in the settings of the shared account. For more information, see "[AUTOTITLE](/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)."
-1. If you haven't already done so, configure 2FA for the bot or service account using an authenticator app (TOTP). For more information, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa)."
+1. Add the new mailing list address as a verified email address in the settings of the shared account. For more information, see [AUTOTITLE](/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account).
+1. If you haven't already done so, configure 2FA for the bot or service account using an authenticator app (TOTP). For more information, see [AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa).
 1. Store the TOTP secret that's offered during 2FA setup in the password manager used by your organization.
 
    > [!NOTE]
@@ -31,7 +31,7 @@ You should ensure that 2FA is enabled for unattended or shared access accounts i
 
    If you have already configured 2FA using TOTP and you need to locate the TOTP secret, use the following steps:
 
-   1. In the shared account's settings, click **{% octicon "shield-lock" aria-hidden="true" %} Password and authentication**.
+   1. In the shared account's settings, click **{% octicon "shield-lock" aria-hidden="true" aria-label="shield-lock" %} Password and authentication**.
    1. Under "Two-factor methods", to the right of "Authenticator app", click **Edit**.
    1. In "Authenticator app", immediately below the QR code, click **setup key**.
 

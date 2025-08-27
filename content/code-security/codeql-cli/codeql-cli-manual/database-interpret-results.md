@@ -5,7 +5,7 @@ versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   ghec: '*'
   ghes: '*'
 topics:
-  - Advanced Security
+  - Code Security
   - Code scanning
   - CodeQL
 type: reference
@@ -18,6 +18,9 @@ redirect_from:
   - /code-security/codeql-cli/manual/database-interpret-results
 ---
 
+<!-- markdownlint-disable GHD053 -->
+
+<!-- markdownlint-disable GHD030 -->
 
 <!-- Content after this section is automatically generated -->
 
@@ -45,7 +48,7 @@ directory using [codeql database run-queries](/code-security/codeql-cli/codeql-c
 
 \[Mandatory] Path to the CodeQL database that has been queried.
 
-#### `<filesuite>...`
+#### `<file|dir|suite>...`
 
 Repeat the specification of which queries were executed here.
 

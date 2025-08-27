@@ -5,7 +5,8 @@ intro: '{% ifversion security-configurations-cloud %}Enable the {% data variable
 versions:
   feature: security-configurations
 topics:
-  - Advanced Security
+  - Code Security
+  - Secret Protection
   - Organizations
   - Security
 children:
@@ -13,7 +14,7 @@ children:
   - /creating-a-custom-security-configuration
   - /applying-a-custom-security-configuration
   - /configuring-global-security-settings-for-your-organization
+  - /giving-org-access-private-registries
 redirect_from:
   - /code-security/securing-your-organization/meeting-your-specific-security-needs-with-custom-security-configurations
 ---
-

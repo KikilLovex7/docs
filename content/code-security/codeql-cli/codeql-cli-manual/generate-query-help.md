@@ -5,7 +5,7 @@ versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   ghec: '*'
   ghes: '*'
 topics:
-  - Advanced Security
+  - Code Security
   - Code scanning
   - CodeQL
 type: reference
@@ -16,6 +16,9 @@ redirect_from:
   - /code-security/codeql-cli/manual/generate-query-help
 ---
 
+<!-- markdownlint-disable GHD053 -->
+
+<!-- markdownlint-disable GHD030 -->
 
 <!-- Content after this section is automatically generated -->
 
@@ -35,7 +38,7 @@ Generate end-user query help from .qhelp files.
 
 ### Primary Options
 
-#### `<qhelpquerysuite>...`
+#### `<qhelp|mdhelp|query|dir|suite>...`
 
 \[Mandatory] Query help files to render. Each argument is one of:
 

@@ -1,13 +1,15 @@
 import express, { Request, Response } from 'express'
 
-import catchMiddlewareError from '#src/observability/middleware/catch-middleware-error.js'
+import catchMiddlewareError from '@/observability/middleware/catch-middleware-error'
 import { aiSearchProxy } from '../lib/ai-search-proxy'
+import { noCacheControl } from '@/frame/middleware/cache-control'
 
 const router = express.Router()
 
 router.post(
   '/v1',
   catchMiddlewareError(async (req: Request, res: Response) => {
+    noCacheControl(res)
     await aiSearchProxy(req, res)
   }),
 )

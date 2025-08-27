@@ -46,6 +46,7 @@ children:
   - /apps
   - /billing
   - /branches
+  - /campaigns
   - /checks
   - /classroom
   - /code-scanning
@@ -55,6 +56,7 @@ children:
   - /collaborators
   - /commits
   - /copilot
+  - /credentials
   - /dependabot
   - /dependency-graph
   - /deploy-keys
@@ -71,11 +73,13 @@ children:
   - /meta
   - /metrics
   - /migrations
+  - /models
   - /oauth-authorizations
   - /orgs
   - /packages
   - /pages
-  - /projects
+  - /private-registries
+  - /projects-classic
   - /pulls
   - /rate-limit
   - /reactions

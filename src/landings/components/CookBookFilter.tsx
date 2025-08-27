@@ -1,7 +1,8 @@
 import { TextInput, ActionMenu, ActionList, Button, Box } from '@primer/react'
 import { SearchIcon } from '@primer/octicons-react'
 import { useRef, useEffect, useState } from 'react'
-import { ArticleCardItems } from '#src/landings/types.ts'
+import { ArticleCardItems } from '@/landings/types'
+import { useTranslation } from '@/languages/components/useTranslation'
 
 type Props = {
   tokens: ArticleCardItems
@@ -23,6 +24,7 @@ export const CookBookFilter = ({
     'All',
     ...new Set(tokens.flatMap((item) => item.complexity || [])),
   ]
+  const { t } = useTranslation('cookbook_landing')
 
   const [selectedCategory, setSelectedCategory] = useState(0)
   const [selectedComplexity, setSelectedComplexity] = useState(0)
@@ -54,14 +56,14 @@ export const CookBookFilter = ({
   }, [isSearchOpen])
 
   return (
-    <>
-      <div>
+    <div className="d-lg-flex d-sm-block">
+      <div className="col-12 mr-2">
         <form onSubmit={(e) => e.preventDefault()}>
           <TextInput
             leadingVisual={SearchIcon}
-            className="float-lg-left m-1"
-            sx={{ minWidth: ['stretch', 'stretch', 'stretch', 250] }}
-            placeholder="Search articles"
+            className="m-1"
+            sx={{ minWidth: ['stretch', 'stretch', 'stretch', 'stretch'] }}
+            placeholder={t('search_articles')}
             ref={inputRef}
             autoComplete="false"
             onChange={(e) => {
@@ -71,16 +73,16 @@ export const CookBookFilter = ({
           />
         </form>
       </div>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap flex-md-nowrap ">
         <ActionMenu>
-          <ActionMenu.Button className="col-md-1 col-sm-2 float-md-left m-1">
+          <ActionMenu.Button className="col-md-1 col-sm-2 m-1">
             <Box
               sx={{
                 color: 'fg.muted',
                 display: 'inline-block',
               }}
             >
-              Category:
+              {t('category')}:
             </Box>{' '}
             {categories[selectedCategory]}
           </ActionMenu.Button>
@@ -100,14 +102,14 @@ export const CookBookFilter = ({
         </ActionMenu>
 
         <ActionMenu>
-          <ActionMenu.Button className="col-md-1 col-sm-2 float-md-left m-1">
+          <ActionMenu.Button className="col-md-1 col-sm-2 m-1">
             <Box
               sx={{
                 color: 'fg.muted',
                 display: 'inline-block',
               }}
             >
-              Complexity:
+              {t('complexity')}:
             </Box>{' '}
             {complexities[selectedComplexity]}
           </ActionMenu.Button>
@@ -126,14 +128,10 @@ export const CookBookFilter = ({
           </ActionMenu.Overlay>
         </ActionMenu>
 
-        <Button
-          variant="invisible"
-          className="col-md-1 col-sm-2 float-left mt-1"
-          onClick={onResetFilter}
-        >
-          Reset filters
+        <Button variant="invisible" className="col-md-1 col-sm-2 mt-1" onClick={onResetFilter}>
+          {t('reset_filters')}
         </Button>
       </div>
-    </>
+    </div>
   )
 }
